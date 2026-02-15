@@ -16,6 +16,8 @@ If C4 diagrams are present:
 - Capture integration types if labeled.
 - Do not infer missing integration types unless explicitly stated.
 
+Describe the C4 diagram in text first, then extract the Application Card.
+
 Produce the output in the following JSON format:
 
 {

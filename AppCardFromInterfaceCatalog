@@ -1,0 +1,47 @@
+You are a senior enterprise architect.
+
+From the currently opened Interface Catalog document, extract a structured Application Card for the application described.
+
+Important rules:
+- Use only information explicitly present in the document.
+- Do NOT invent capabilities, integrations, or technologies.
+- If information is missing, mark it as "Not Specified".
+- Do NOT infer NFRs (ignore SLA, latency, scaling).
+- If the application appears to be a monolith, classify it as "Monolith" only if clearly indicated.
+- Consolidate duplicate interfaces if repeated.
+
+Produce the output in the following JSON format:
+
+{
+  "application_name": "",
+  "domain": "",
+  "application_type": "Monolith | Microservice | External | SaaS | Not Specified",
+  "description": "",
+
+  "interfaces": [
+    {
+      "interface_id": "",
+      "interface_name": "",
+      "direction": "Inbound | Outbound | Not Specified",
+      "integration_type": "REST | SOAP | MQ | Kafka | File | SWIFT | DB | Not Specified",
+      "sync_or_async": "Sync | Async | Batch | Not Specified",
+      "counterparty_application": [],
+      "business_purpose": "",
+      "event_or_api_name": "",
+      "version": "Not Specified"
+    }
+  ],
+
+  "published_events": [],
+  "consumed_events": [],
+
+  "inferred_business_capabilities": [],
+
+  "data_stores_if_mentioned": [],
+
+  "notes_from_catalog": []
+}
+
+After JSON, provide:
+1. A short structural summary (max 8 lines)
+2. A list of any ambiguities or missing details in the catalog

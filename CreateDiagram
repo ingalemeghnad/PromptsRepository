@@ -1,0 +1,8 @@
+From the following E2E design:
+
+1. Identify the primary execution path in correct time order.
+2. Define this as the horizontal spine.
+3. Identify secondary systems (event consumers, monitoring, batch).
+4. Place secondary systems vertically aligned under the relevant primary node.
+5. Ensure no backward arrows in primary flow.
+6. Keep diagram visually linear and readable.
